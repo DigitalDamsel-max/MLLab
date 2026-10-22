@@ -4,6 +4,7 @@ MLLab is a web-based dashboard concept for managing machine-learning projects, d
 
 
 ** Features represented in the frontend **
+
 Dashboard / Overview — a central view of project and job activity.
 Datasets — dataset-related views and upload integration.
 Experiments — experiment workflow and model-related controls.
@@ -16,6 +17,7 @@ The exact features available at runtime depend on the matching backend routes an
 
 
 ** Technology stack **
+
 React (frontend components)
 JavaScript and CSS
 Axios for HTTP requests
@@ -27,10 +29,10 @@ NewExperiment.jsx — experiment form component.
 api.js — Axios client and API helper functions.
 README.txt 
 Requirements
-For the complete application, install/configure:
 
 
 ** Setup **
+
 1. Place the frontend files
 Copy the supplied files into the appropriate locations in your existing React project. Keep the import paths consistent with your project structure. For example, api.js must be located where the imports in your React components expect it.
 
@@ -54,9 +56,10 @@ npm run dev
 5. Configure the database, if applicable
 If the full backend uses MySQL, include a reviewed database/schema.sql file in the repository. Document the database name and import steps here once they match the actual schema. Never commit production credentials or private user data.
 
-** API endpoints referenced by api.js **
-The frontend API helper currently references routes for:
 
+** API endpoints referenced by api.js **
+
+The frontend API helper currently references routes for:
 Authentication: /register, /login
 Projects: /projects
 Queues: /queues, /queues/<project_id>, and queue pause/resume routes
