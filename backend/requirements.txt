@@ -1,0 +1,10 @@
+Flask
+Flask-CORS
+mysql-connector-python
+python-dotenv
+PyJWT
+Werkzeug
+pandas
+scikit-learn
+joblib
+croniter
