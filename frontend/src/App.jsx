@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 
@@ -39,12 +40,20 @@ function App() {
 
     if (!loggedIn) {
         return (
-            <Login
-                onLogin={handleLogin}
-            />
+            <>
+                <Login
+                    onLogin={handleLogin}
+                />
+                <Analytics />
+            </>
         );
     }
-    return <Dashboard user={user} onLogout={handleLogout} />;
+    return (
+        <>
+            <Dashboard user={user} onLogout={handleLogout} />
+            <Analytics />
+        </>
+    );
 }
 
 export default App;
