@@ -1,7 +1,15 @@
 import axios from "axios";
+
+const API_URL = import.meta.env.VITE_API_URL;
+
+if (!API_URL) {
+    throw new Error("VITE_API_URL is missing from the production build");
+}
+
 const api = axios.create({
-    baseURL: "http://127.0.0.1:5000/api"
+    baseURL: API_URL
 });
+
 export function setToken(token) {
     localStorage.setItem("token", token);
 }
@@ -48,4 +56,5 @@ export const uploadDataset = (file, projectId) => {
 };
 export const getExperimentResults = () => api.get("/experiment-results");
 export const getWorkers = () => api.get("/workers");
+
 export default api;
